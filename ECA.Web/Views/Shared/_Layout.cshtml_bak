@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        
+        <script src="~/Scripts/jquery-1.7.1.js"></script>
+        <link href="~/Content/index_home.css" rel="stylesheet" />
+        <link href="~/Content/stylesheet.css" rel="stylesheet" />
+        <link href="~/Content/print_stylesheet.css" rel="stylesheet" />
+        <link href="~/Content/stylesheet_betterCategoriesEzInfo.css" rel="stylesheet" />
+        <link href="~/Content/stylesheet_css_buttons.css" rel="stylesheet" />
+        <link href="~/Content/stylesheet_dotline.css" rel="stylesheet" />
+        <link href="~/Content/stylesheet_footer_menu.css" rel="stylesheet" />
+        <link href="~/Content/stylesheet_module_tabs.css" rel="stylesheet" />
+        <script src="~/Scripts/jquery.jstree.js"></script>
+        <script src="~/Scripts/xslt.js"></script>
+        <script src="~/Scripts/jquery.xslt.js"></script>
+        <script lang="javascript">
+           
+            $(function GetTreeXML(xml) {
+                debugger
+                var targetXml = $.parseXML('<root></root>');
+                var sourceXml = $.parseXML(xml);
+                var finalXml;
+                $(xml).find("CategoryName").each(function () {
+                    add_children(targetXml, 'item', 'root');
+                    //$(targetXml).find('item').attr('id', 'xml_' + $(this).text());
+                    add_children(targetXml, 'content', 'item');
+                    add_children(targetXml, 'name', 'content');
+                    
+                    $(targetXml).find('name').text($(this).text());
+                    $(this).siblings('Books').find('Book').each(function () {
+                        debugger
+                        var childXml = $.parseXML('<item></item>');
+                        add_children(childXml, 'content', 'item');
+                        add_children(childXml, 'name', 'content');
+                        $(childXml).find('name').text($(this).find('Description').text());
+                        $(targetXml).find('item').append($(childXml).find('item'));
+                        
+
+                    });
+                });
+                alert(targetXml.xml);
+                return targetXml.xml;
+            });
+
+            $(function add_children(xmlTree, child_name, parent_name) {
+                str = xmlTree.createElement(child_name);
+                $(xmlTree).find(parent_name).append(str);
+            });
+           $(function()
+            {
+                $.jstree._themes = "../Content/themes/";
+            });
+            $.support.cors = true;
+           $.ajax({
+                crossDomain:true,
+                type: "GET",
+               
+                url: "http://localhost:23062/CatalogService.svc/web/books/xml",
+                dataType: "xml",
+                success: function (data,status,xhr) {
+                    $("#catalogTreeView")
+                             .jstree({
+                                 "xml_data": {
+                                     "type": "xml_nested",
+                                     "data": GetTreeXML(data.text)
+                                       
+                                 },
+                                 "themes": {
+                                     "theme": "default-rtl",
+                                     "dots": true,
+                                     "icons": false
+                                     
+                                 },
+
+                                 "plugins": ["themes","xml_data", "ui","checkbox"]
+                            });
+            }
+                ,
+                error: function (xhr) {
+                    
+                    alert(xhr.responseText);
+                }
+            });
+
+           
+        </script>
+    </head>
+    <body>
+        <header>
+            Header
+        </header>
+        <div id="body">
+            <div class="leftBoxContainer" id="categories" style="width: 180px">
+               <h3 class="leftBoxHeading" id="categoriesHeading">Browse</h3>
+                <div id="categoriesContent" class="sideBoxContent">
+                    <div id="catalogTreeView">
+                        
+                    </div>
+                    <div id="transformResult">
+
+                    </div>
+    </div>
+                </div>
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+           Footer
+        </footer>
+
+     
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="ECA.CatalogServices" elementFormDefault="qualified" targetNamespace="ECA.CatalogServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd2" namespace="ECA.Contracts" />
+  <xs:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd4" namespace="ECA.Services.FaultContracts" />
+  <xs:element name="GetAllBooksGroupedByCategory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBooksGroupedByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="ECA.Contracts" minOccurs="0" name="GetAllBooksGroupedByCategoryResult" nillable="true" type="q1:ArrayOfBookCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q2="ECA.Services.FaultContracts" name="CatalogServiceFault" nillable="true" type="q2:CatalogServiceFault" />
+  <xs:element name="GetAllBooksGroupedByCategoryAsString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="format" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBooksGroupedByCategoryAsStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllBooksGroupedByCategoryAsStringResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e802c329-00a3-456e-9a35-5078bad70c0e" name="ShoppingCart" linkedPackageId="3a28ca53-9b05-4155-9ac9-383fafe47164" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="64a27673-0b1d-49f5-9717-492eaed39d71" name="Shopping Cart" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="a83d1aaa-a94e-4e87-b9e5-31393e2df050">
+            <elementDefinition Id="c402da27-db19-4915-a64d-934c014ad50b" />
+            <body>If user is not logged in
+</body>
+            <annotatedElements>
+              <useCaseMoniker Id="d5b4a672-f88d-4e14-a580-e3bd9f7d6f75" LastKnownName="Sign In" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="ccb87aae-a00c-4127-953c-04dbe9ce6260" />
+        <targetEnds>
+          <association Id="779b677e-df28-48c0-a12d-0688c777c133" isDerived="false" sourceEndRoleName="Shopping Cart" targetEndRoleName="Shopping Cart" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8b87ca9-161e-4841-9150-352833f2e284" name="Shopping Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b78844c2-8d78-407c-ab24-72ef2bd0aab4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d59a668f-36b5-41db-9037-b114433b13a3" name="Shopping Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="295e7fb8-1a67-4b6d-b1d5-9e33c3303a41" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1c626f65-e0a9-4d32-84f1-b0326a90325a" />
+          </association>
+        </targetEnds>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="b4ab7f8d-7e0f-4d38-ba90-bfaafc83ccc1" name="Add to Cart" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f4e97495-fa32-42e8-976d-31ec5072163c" />
+        <subjects>
+          <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="9477daa8-bddd-44a0-bd10-e3e153b52eb7" name="Remove from Cart" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e35cac42-ac43-421b-b04a-addeaf329a4b" />
+        <subjects>
+          <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a2177c55-25f4-43ec-a0b6-db5905968432" name="Save Cart" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c9c06fc7-f550-40e8-8603-6854faaac8e3" />
+        <subjects>
+          <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d5b4a672-f88d-4e14-a580-e3bd9f7d6f75" name="Sign In" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="175acd87-5ecf-4aeb-944d-efaa52ec9df4" />
+        <additions>
+          <include Id="e713fcd4-228a-4160-bd1b-1272186a8d81">
+            <useCaseMoniker Id="a2177c55-25f4-43ec-a0b6-db5905968432" LastKnownName="Save Cart" />
+            <elementDefinition Id="65333517-5caf-40a6-9752-6de268b1bb6e" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="fc611dc5-117c-4b03-9461-fa783cd8e75e" name="Update Quantity" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2fa5e489-bc1a-4e17-b75a-9cac0cbffff0" />
+        <subjects>
+          <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="a0c06d01-91b8-4c6b-ae43-ef7e88b8212b" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ec3b5e03-2f5a-40b2-a0f3-6adb12ead3fe" />
+        <targetEnds>
+          <association Id="a8b68601-85ce-4c02-9d4c-1413b0bbf008" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Add to Cart" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b4ab7f8d-7e0f-4d38-ba90-bfaafc83ccc1" LastKnownName="Add to Cart" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9754f33b-1e44-4288-8ee3-2f403af27a65" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cf9c6b08-8f3a-4875-9a61-1d2f1634c721" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e0a76010-4ac8-4a3b-b5aa-6a77845b7926" name="Add to Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9c341b81-de83-4b8a-97e0-9bad1d64ae23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="862d1beb-91be-480a-8be6-1774be9effee" />
+          </association>
+          <association Id="9905cdfe-d62a-40b8-a7ee-99a1a98ae2cf" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Remove from Cart" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9477daa8-bddd-44a0-bd10-e3e153b52eb7" LastKnownName="Remove from Cart" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a9c2c53-7059-472a-a905-1744c90f1240" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="68f4f8b1-b22b-4290-bed5-43ef16a347a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bb6027f0-b9d8-4321-a045-a117f58b0f57" name="Remove from Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ce22fa45-9288-42e8-9c60-9547a58abe1c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="df72c00f-830d-421a-848e-0f30904a5532" />
+          </association>
+          <association Id="c6146c11-e9a3-4978-9c02-1f8cd598c77e" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Save Cart" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a2177c55-25f4-43ec-a0b6-db5905968432" LastKnownName="Save Cart" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce4d04ec-7eae-438f-a562-22ab434735cf" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aed13461-79bc-4016-a687-6c029310b30c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed9ecbd4-ed70-45d4-94ed-00bfc4157f8f" name="Save Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d1e8c9d0-81d6-4951-bb56-afd7cd56333d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dba6c1a8-fc3f-46f2-a896-cba2c5c0e295" />
+          </association>
+          <association Id="3cf13a98-94a4-4056-a3f6-b787b34f9dde" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Update Quantity" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fc611dc5-117c-4b03-9461-fa783cd8e75e" LastKnownName="Update Quantity" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b7832760-800b-40e6-a9c3-b9962835c94b" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="27db5470-50f5-4426-8a56-391c8efa55ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b02752b-e7ba-4346-81f5-fef4169bb639" name="Update Quantity" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="91d73665-b76e-436c-af4d-640d5571a0e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="71cc8af6-95d0-45c1-a445-a4c2c4525a2c" />
+          </association>
+          <association Id="cc6bdcce-9dd6-4de0-ad2f-d638ca28adb4" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Delete from Cart" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7bee4495-4bff-4d9c-ad78-d003c675fb44" LastKnownName="Delete from Cart" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="207965e9-1226-40da-8335-7bccc59b704a" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6e0d918b-c360-4b5b-8c5c-e9029e1001c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f5dd6b8-543e-4bbc-adea-6f936be17212" name="Delete from Cart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9a10c2f2-4e7a-467e-bace-e95a90e6c83f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4c2ab5dd-4b4c-4407-82c6-3cfe0e278e1e" />
+          </association>
+          <association Id="5206314b-0e79-4174-abd9-2019bfb4387a" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Checkout" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="77f43bc4-4527-43bf-9f3a-eb66e9eb114a" LastKnownName="Checkout" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e9932ac6-a656-4d24-a84f-fbc1651a2d2c" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="295ce5f7-915a-40d2-aaeb-e3265338ec9f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc1f5b4f-d681-4e21-8d7c-2090912f3671" name="Checkout" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="97c5c9b8-7f96-476c-b880-389abf8df487" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4926ff93-5cd9-47d5-b6e3-5dae8b112e1b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="7bee4495-4bff-4d9c-ad78-d003c675fb44" name="Delete from Cart" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="577af91a-1216-4049-8ea7-1dbeae6cdc95" />
+        <subjects>
+          <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="77f43bc4-4527-43bf-9f3a-eb66e9eb114a" name="Checkout" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e907dff-e69e-479f-82b9-e6841925bda1" />
+        <subjects>
+          <subsystemMoniker Id="64a27673-0b1d-49f5-9717-492eaed39d71" LastKnownName="Shopping Cart" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="3a28ca53-9b05-4155-9ac9-383fafe47164" name="ECAModelling">
+    <elementDefinition Id="ae755ec5-aba1-4f16-87c1-d5e8f6587ad8" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7954a661-5c02-4cb6-be80-e9797efc63e3">
+        <profileInstance Id="9a06ecbe-14a6-4980-b4dd-d5184b84e907" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b0655292-a46e-4e58-9054-e6634fe32027">
+        <profileInstance Id="f10ee628-a2d1-4ade-868e-f921e6bbf449" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

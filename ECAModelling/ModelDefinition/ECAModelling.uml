@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="ae755ec5-aba1-4f16-87c1-d5e8f6587ad8"
+  name="ECAModelling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="c402da27-db19-4915-a64d-934c014ad50b">
+      <body>If user is not logged in
+</body>
+      <annotatedElements>
+        <useCaseMoniker
+          Id="175acd87-5ecf-4aeb-944d-efaa52ec9df4"
+          LastKnownName="Sign In"
+          LastKnownLocation="ECAModelling.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <useCase
+        Id="06915878-a447-4a58-84ab-21fbc11224ac"
+        name="Add To Cart"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+        name="Shopping Cart"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="1c626f65-e0a9-4d32-84f1-b0326a90325a"
+            isDerived="false"
+            sourceEndRoleName="Shopping Cart"
+            targetEndRoleName="Shopping Cart"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+              LastKnownName="Shopping Cart"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b78844c2-8d78-407c-ab24-72ef2bd0aab4"
+                  name="Shopping Cart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="295e7fb8-1a67-4b6d-b1d5-9e33c3303a41"
+                  name="Shopping Cart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f4e97495-fa32-42e8-976d-31ec5072163c"
+        name="Add to Cart"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+            LastKnownName="Shopping Cart"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e35cac42-ac43-421b-b04a-addeaf329a4b"
+        name="Remove from Cart"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+            LastKnownName="Shopping Cart"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c9c06fc7-f550-40e8-8603-6854faaac8e3"
+        name="Save Cart"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+            LastKnownName="Shopping Cart"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0ac0180a-6c19-4446-9fa5-3875bc828ccb"
+        name="Retrieve Cart"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3d47b77f-c391-44ff-a366-2771a6936e0f"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="175acd87-5ecf-4aeb-944d-efaa52ec9df4"
+        name="Sign In"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="65333517-5caf-40a6-9752-6de268b1bb6e">
+            <useCaseMoniker
+              Id="c9c06fc7-f550-40e8-8603-6854faaac8e3"
+              LastKnownName="Save Cart"
+              LastKnownLocation="ECAModelling.uml" />
+          </include>
+          <include
+            Id="40b03f01-9eec-4787-aa41-3e653015fb71">
+            <useCaseMoniker
+              Id="0ac0180a-6c19-4446-9fa5-3875bc828ccb"
+              LastKnownName="Retrieve Cart"
+              LastKnownLocation="ECAModelling.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+            LastKnownName="Shopping Cart"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2fa5e489-bc1a-4e17-b75a-9cac0cbffff0"
+        name="Update Quantity"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+            LastKnownName="Shopping Cart"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ec3b5e03-2f5a-40b2-a0f3-6adb12ead3fe"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="862d1beb-91be-480a-8be6-1774be9effee"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Add to Cart"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f4e97495-fa32-42e8-976d-31ec5072163c"
+              LastKnownName="Add to Cart"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf9c6b08-8f3a-4875-9a61-1d2f1634c721"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9c341b81-de83-4b8a-97e0-9bad1d64ae23"
+                  name="Add to Cart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="df72c00f-830d-421a-848e-0f30904a5532"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Remove from Cart"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e35cac42-ac43-421b-b04a-addeaf329a4b"
+              LastKnownName="Remove from Cart"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68f4f8b1-b22b-4290-bed5-43ef16a347a9"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce22fa45-9288-42e8-9c60-9547a58abe1c"
+                  name="Remove from Cart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dba6c1a8-fc3f-46f2-a896-cba2c5c0e295"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Save Cart"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c9c06fc7-f550-40e8-8603-6854faaac8e3"
+              LastKnownName="Save Cart"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="aed13461-79bc-4016-a687-6c029310b30c"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d1e8c9d0-81d6-4951-bb56-afd7cd56333d"
+                  name="Save Cart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="97313b23-6a95-4db5-a27c-5639292483f4"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Retrieve Cart"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0ac0180a-6c19-4446-9fa5-3875bc828ccb"
+              LastKnownName="Retrieve Cart"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6bf3bb08-3c10-4051-893f-d2d35488d6b7"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a95dfe1c-b7bb-4b23-97da-d3aab18859ac"
+                  name="Retrieve Cart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="71cc8af6-95d0-45c1-a445-a4c2c4525a2c"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Update Quantity"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2fa5e489-bc1a-4e17-b75a-9cac0cbffff0"
+              LastKnownName="Update Quantity"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="27db5470-50f5-4426-8a56-391c8efa55ae"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="91d73665-b76e-436c-af4d-640d5571a0e1"
+                  name="Update Quantity"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4c2ab5dd-4b4c-4407-82c6-3cfe0e278e1e"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Delete from Cart"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="577af91a-1216-4049-8ea7-1dbeae6cdc95"
+              LastKnownName="Delete from Cart"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e0d918b-c360-4b5b-8c5c-e9029e1001c7"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a10c2f2-4e7a-467e-bace-e95a90e6c83f"
+                  name="Delete from Cart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4926ff93-5cd9-47d5-b6e3-5dae8b112e1b"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Checkout"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1e907dff-e69e-479f-82b9-e6841925bda1"
+              LastKnownName="Checkout"
+              LastKnownLocation="ECAModelling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="295ce5f7-915a-40d2-aaeb-e3265338ec9f"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="97c5c9b8-7f96-476c-b880-389abf8df487"
+                  name="Checkout"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="577af91a-1216-4049-8ea7-1dbeae6cdc95"
+        name="Delete from Cart"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+            LastKnownName="Shopping Cart"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1e907dff-e69e-479f-82b9-e6841925bda1"
+        name="Checkout"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="ccb87aae-a00c-4127-953c-04dbe9ce6260"
+            LastKnownName="Shopping Cart"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bdbdb6d4-ba2b-4aa1-a399-0caf468c9dea"
+        name="UseCase2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="459f90c1-afe8-484c-a8e0-4cb3787fd244"
+        name="Subsystem1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3c577009-0abb-4726-bcf7-0242085ce92f"
+        name="Login"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="64c9bf37-eedf-4b74-aa4b-580eb819d42e">
+            <useCaseMoniker
+              Id="d0d96a9e-79dc-4226-baf4-a2d58bc2cf2e"
+              LastKnownName="Register User"
+              LastKnownLocation="ECAModelling.uml" />
+          </include>
+          <include
+            Id="ec10fa40-1981-42bc-9204-7e69b902853d">
+            <useCaseMoniker
+              Id="ac7e5519-be5a-4a39-96c6-cfe25f97c70d"
+              LastKnownName="Forget Password"
+              LastKnownLocation="ECAModelling.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="459f90c1-afe8-484c-a8e0-4cb3787fd244"
+            LastKnownName="Subsystem1"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="38c84395-2cd5-4a21-a971-0fab63f71a16"
+        name="User"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="6168a895-8eac-4076-83dd-f2cf2a05eb94">
+            <useCaseMoniker
+              Id="3c577009-0abb-4726-bcf7-0242085ce92f"
+              LastKnownName="Login"
+              LastKnownLocation="ECAModelling.uml" />
+          </dependency>
+          <dependency
+            Id="2819ad7f-571a-440a-b886-d405cb554e08">
+            <useCaseMoniker
+              Id="2d8a6bad-c136-4347-bf72-d7e3b291955a"
+              LastKnownName="Logout"
+              LastKnownLocation="ECAModelling.uml" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2d8a6bad-c136-4347-bf72-d7e3b291955a"
+        name="Logout"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="459f90c1-afe8-484c-a8e0-4cb3787fd244"
+            LastKnownName="Subsystem1"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d0d96a9e-79dc-4226-baf4-a2d58bc2cf2e"
+        name="Register User"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="459f90c1-afe8-484c-a8e0-4cb3787fd244"
+            LastKnownName="Subsystem1"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ac7e5519-be5a-4a39-96c6-cfe25f97c70d"
+        name="Forget Password"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="459f90c1-afe8-484c-a8e0-4cb3787fd244"
+            LastKnownName="Subsystem1"
+            LastKnownLocation="ECAModelling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ccff90a4-a7bc-4fa8-8d2f-c58567bb576b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:23062/CartService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CartService.disco" MetadataType="Disco" ID="7cac922e-98df-4df0-b549-bbc9bf03b8d3" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?disco" />
+    <MetadataFile FileName="CartService.xsd" MetadataType="Schema" ID="c2672007-8869-480e-85bc-326323b6ed03" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CartService1.xsd" MetadataType="Schema" ID="ad36fccb-66fe-48c4-94e2-3508709f3510" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CartService.wsdl" MetadataType="Wsdl" ID="d71f4323-45d8-45ab-b170-6ec2cfb32d0f" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?wsdl" />
+    <MetadataFile FileName="CartService2.xsd" MetadataType="Schema" ID="3279084d-f43c-4ea8-8860-a362226bfa29" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CartService1.wsdl" MetadataType="Wsdl" ID="f33cf804-ab9d-4725-9474-4933237bf21d" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

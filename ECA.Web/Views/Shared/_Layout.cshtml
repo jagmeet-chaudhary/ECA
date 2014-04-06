@@ -1,0 +1,72 @@
+﻿;<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        
+        <script src="~/Scripts/jquery-1.7.1.js"></script>
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link href="~/Content/ECA.css" rel="stylesheet" />
+        <script lang="javascript">
+            $.support.cors = true;
+           $.ajax({
+                crossDomain:true,
+                type: "GET",
+               
+                url: "http://localhost:23062/CatalogService.svc/web/books/xml",
+                dataType: "xml",
+                success: function (data, status, xhr) {
+                    var xml = $.parseXML(data.text);
+                    $(xml).find("BookCategory").each(function () {
+                        if ($(this).find("CategoryName").text() != "") {
+                            var categoryName = $(this).find("CategoryName").text();
+                            var categoryNameHtml = "<h4>" + categoryName + "</h4>";
+                            var treeHtml = $("#catalogTreeView").html();
+                            $("#catalogTreeView").html(treeHtml + categoryNameHtml);
+                        }
+
+                        $(this).find("Book").each(function () {
+                            var bookName = $(this).find("Title").text();
+                            var bookId = $(this).find("ID").text();
+                            var bookNameHtml = "<p><a href='/Product/Details/" + bookId + "' id='anchor" + bookId + "'>" + bookName + "</a></p>";
+                            var treeHtml = $("#catalogTreeView").html();
+                            $("#catalogTreeView").html(treeHtml + bookNameHtml);
+                        });
+
+
+                    });
+                },
+                error: function (xhr) {
+                    alert(xhr.responseText);
+                }
+            });
+
+           
+        </script>
+    </head>
+    @model ECA.Web.ViewModel.BaseViewModel  
+    <body>
+        <header>
+            @*@{Html.RenderPartial("_HeaderCart", Model.ShoppingCartHeaderViewModel);}*@
+        </header>
+        <div class="page" >
+            <fieldset style="background-color:antiquewhite">
+               <legend>Browse</legend>
+                    <div id="catalogTreeView">
+                        
+                    </div>
+          
+            <div id="main" style="float:none">
+                @RenderBody()
+            </div>
+                  </fieldset>
+        </div>
+        <footer>
+        </footer>
+
+     
+    </body>
+</html>

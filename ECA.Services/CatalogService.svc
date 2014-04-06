@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ECA.Services.CatalogService" Factory="ECA.Services.WcfServiceFactory" %>

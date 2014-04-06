@@ -1,0 +1,44 @@
+﻿<ArrayOfBookCategory xmlns="ECA.Contracts" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <BookCategory z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+    <Books>
+      <Book z:Id="i2">
+        <Author i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/ECA.Model"/>
+        <AuthorId>AUTH1</AuthorId><BookCategory z:Ref="i1"/>
+        <CategoryId>CATE1</CategoryId>
+        <Description>A Search in secret india</Description>
+        <Genre i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/ECA.Model"/>
+        <GenreId>GENR1</GenreId>
+        <ID>BOOK1     </ID>
+        <ISBN>ISBN1439056501</ISBN>
+        <Title>A Search in secret india</Title>
+        </Book>
+      <Book z:Id="i3">
+        <Author i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/ECA.Model"/>
+        <AuthorId>AUTH1</AuthorId><BookCategory z:Ref="i1"/>
+        <CategoryId>CATE1</CategoryId>
+        <Description>Midnight with Mystics</Description>
+        <Genre i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/ECA.Model"/>
+        <GenreId>GENR1</GenreId>
+        <ID>BOOK2     </ID>
+        <ISBN>ISBN1439056502</ISBN>
+        <Title>Midnight with Mystics</Title>
+        </Book>
+      <Book z:Id="i4">
+        <Author i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/ECA.Model"/>
+        <AuthorId>AUTH1</AuthorId>
+        <BookCategory z:Ref="i1"/>
+        <CategoryId>CATE1</CategoryId>
+        <Description>Mystics Musing</Description>
+        <Genre i:nil="true" xmlns:a="http://schemas.datacontract.org/2004/07/ECA.Model"/>
+        <GenreId>GENR1</GenreId>
+        <ID>BOOK3     </ID>
+        <ISBN>ISBN1439056503</ISBN>
+        <Title>Mystics Musing</Title>
+      </Book>
+    </Books>
+    <CategoryId>CATE1</CategoryId>
+    <CategoryName>Philosophy</CategoryName>
+  </BookCategory>
+</ArrayOfBookCategory>
+
+BookCategory//Books

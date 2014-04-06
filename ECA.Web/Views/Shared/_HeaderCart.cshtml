@@ -1,0 +1,20 @@
+﻿@model ECA.Web.ViewModel.CartHeaderViewModel  
+
+<fieldset>
+    <legend>CartHeaderViewModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Total)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Total)
+    </div>
+</fieldset>
+

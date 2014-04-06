@@ -1,0 +1,41 @@
+﻿.display-label {
+    font-weight:bold;
+}
+#catalogTreeView {
+    width:200px;
+    float:left;
+}
+#catalogGridView {
+   
+    margin:5px; 
+    overflow:hidden;
+}
+.ProductImage {
+    width:100px;
+    height:100px;
+}
+.mainContent {
+    width:400px; 
+}
+
+.ProductImageGrid {
+    border:solid 1px;
+    padding:3px;
+   float:left;
+   height:100px;
+    width:100px;
+    margin:5px;
+}
+.ProductImageLarge {
+    border:solid 1px;
+    padding:3px;
+   height:200px;
+    width:175px;
+    margin:5px;
+}
+.ProductDescription {
+    float:left;
+}
+.ProductImageDiv {
+    float:right;
+}
