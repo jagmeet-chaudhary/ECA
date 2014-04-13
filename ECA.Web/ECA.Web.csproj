@@ -206,6 +206,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\CategoryViewModel.cs" />
     <Compile Include="ViewModel\ProductViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
   </ItemGroup>
@@ -459,13 +460,16 @@
     <Content Include="Properties\DataSources\ECA.Model.BookCategory.datasource" />
     <Content Include="Properties\DataSources\ECA.Model.Book.datasource" />
     <Content Include="Properties\DataSources\ECA.Model.Cart.datasource" />
-    <Content Include="Service References\CartService\CartService.disco" />
-    <Content Include="Service References\CartService\configuration91.svcinfo" />
-    <Content Include="Service References\CartService\configuration.svcinfo" />
-    <Content Include="Service References\CartService\Reference.svcmap">
+    <None Include="Service References\CartService\CartService.disco" />
+    <None Include="Service References\CartService\configuration91.svcinfo" />
+    <None Include="Service References\CartService\configuration.svcinfo" />
+    <None Include="Service References\CartService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
+    <None Include="Service References\CartService\CartService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\CatalogService\CatalogService.disco" />
     <None Include="Service References\CatalogService\configuration91.svcinfo" />
     <None Include="Service References\CatalogService\configuration.svcinfo" />
@@ -561,14 +565,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Product\Product.cshtml" />
-    <Content Include="Views\Product\_ProductGrid.cshtml" />
     <Content Include="Views\Shared\_HeaderCart.cshtml" />
     <None Include="Service References\CatalogService\CatalogService.wsdl" />
-    <Content Include="Service References\CartService\CartService.wsdl" />
+    <None Include="Service References\CartService\CartService.wsdl" />
     <None Include="Service References\CartService\CartService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Service References\CartService\CartService1.wsdl" />
+    <None Include="Service References\CartService\CartService1.wsdl" />
     <None Include="Service References\CartService\CartService1.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -609,6 +612,8 @@
     <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\_ProductGridItem.cshtml" />
+    <Content Include="Views\Home\_ProductGrid.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml_bak" />
   </ItemGroup>
   <ItemGroup>

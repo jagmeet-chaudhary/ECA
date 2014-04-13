@@ -23,6 +23,7 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="CartService.disco" MetadataType="Disco" ID="7cac922e-98df-4df0-b549-bbc9bf03b8d3" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?disco" />
+    <MetadataFile FileName="CartService3.xsd" MetadataType="Schema" ID="58e19569-b6b4-4e9a-8a03-ba49ba05d313" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?xsd=xsd3" />
     <MetadataFile FileName="CartService.xsd" MetadataType="Schema" ID="c2672007-8869-480e-85bc-326323b6ed03" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?xsd=xsd1" />
     <MetadataFile FileName="CartService1.xsd" MetadataType="Schema" ID="ad36fccb-66fe-48c4-94e2-3508709f3510" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?xsd=xsd0" />
     <MetadataFile FileName="CartService.wsdl" MetadataType="Wsdl" ID="d71f4323-45d8-45ab-b170-6ec2cfb32d0f" SourceId="1" SourceUrl="http://localhost:23062/CartService.svc?wsdl" />

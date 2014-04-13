@@ -80,6 +80,7 @@
   <ItemGroup>
     <Content Include="CartService.svc" />
     <Content Include="CatalogService.svc" />
+    <Content Include="Global.asax" />
     <Content Include="Unity.Wcf.README.txt" />
     <Content Include="UserService.svc" />
     <Content Include="Web.config">
@@ -94,6 +95,9 @@
       <DependentUpon>CatalogService.svc</DependentUpon>
     </Compile>
     <Compile Include="Contracts\FaultContracts.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="ICartService.cs" />
     <Compile Include="ICatalogService.cs" />

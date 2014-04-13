@@ -12,8 +12,8 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
-      <wsdl:fault name="CatalogServiceFault">
-        <soap:fault use="literal" name="CatalogServiceFault" namespace="" />
+      <wsdl:fault name="BaseServiceFault">
+        <soap:fault use="literal" name="BaseServiceFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="GetAllBooksGroupedByCategoryAsString">
@@ -24,8 +24,20 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
-      <wsdl:fault name="CatalogServiceFault">
-        <soap:fault use="literal" name="CatalogServiceFault" namespace="" />
+      <wsdl:fault name="BaseServiceFault">
+        <soap:fault use="literal" name="BaseServiceFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookDetails">
+      <soap:operation soapAction="ECA.CatalogServices/ICatalogService/GetBookDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="BaseServiceFault">
+        <soap:fault use="literal" name="BaseServiceFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>

@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ECA.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ECA.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd2" namespace="ECA.Contracts" />
-  <xs:complexType name="Author">
+<xs:schema xmlns:tns="ECA.Services.FaultContracts" elementFormDefault="qualified" targetNamespace="ECA.Services.FaultContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="BaseServiceFault">
     <xs:sequence>
-      <xs:element minOccurs="0" name="AuthorId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="AuthorName" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="ECA.Contracts" minOccurs="0" name="Books" nillable="true" type="q1:ArrayOfBook" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Author" nillable="true" type="tns:Author" />
-  <xs:complexType name="Genre">
-    <xs:sequence>
-      <xs:element xmlns:q2="ECA.Contracts" minOccurs="0" name="Books" nillable="true" type="q2:ArrayOfBook" />
-      <xs:element minOccurs="0" name="GenreId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="GenreName" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Genre" nillable="true" type="tns:Genre" />
+  <xs:element name="BaseServiceFault" nillable="true" type="tns:BaseServiceFault" />
 </xs:schema>

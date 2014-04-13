@@ -4,47 +4,12 @@
 
 <html>
     <head>
-        <script lang="javascript">
-$.ajax({
-                crossDomain:true,
-                type: "GET",
-               
-                url: "http://localhost:23062/CatalogService.svc/web/books/xml",
-                dataType: "xml",
-                success: function (data, status, xhr) {
-                    var xml = $.parseXML(data.text);
-                    $(xml).find("BookCategory").each(function () {  
-                        if ($(this).find("CategoryName").text() != "") {
-                            var categoryName = $(this).find("CategoryName").text();
-                            var categoryNameHtml = "<div><h4>" + categoryName + "</h4></div>";
-                            var treeHtml = $("#catalogGridView").html();
-                            $("#catalogGridView").html(treeHtml + categoryNameHtml);
-                        }
-
-                        $(this).find("Book").each(function () {
-                            var bookName = $(this).find("Title").text();
-                            var bookId = $(this).find("ID").text();
-                            var url = $(this).find("ImageUrl").text();
-                            var bookNameHtml = "<div class='ProductImageGrid'><a href='/Product/Details/" + bookId  + "'><img class='ProductImage' src='/Images/Product/" + url + "' id='img" + bookId + "' alt='" + bookName + "'/></a></div>";
-                            var treeHtml = $("#catalogGridView").html();
-                            $("#catalogGridView").html(treeHtml + bookNameHtml );
-                        });
-
-
-                    });
-                },
-                error: function (xhr) {
-                    alert(xhr.responseText);
-                }
-            });
-
-           
-        </script>
+     
         </head>
     <body>
         <div class="mainContent">
-             <div id="catalogGridView">
-                 
+            <div id="containerDiv">
+                @{Html.RenderAction("ProductGrid", "Home");}
             </div>
         </div>
     </body>

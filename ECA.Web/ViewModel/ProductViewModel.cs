@@ -23,7 +23,7 @@ namespace ECA.Web.ViewModel
         public string ImageUrl { get; set; }
 
     }
-    public class ProductViewModelBuilder 
+    public class ProductViewModelBuilder
     {
         Book _model;
         public ProductViewModelBuilder(Book model)
@@ -36,5 +36,7 @@ namespace ECA.Web.ViewModel
             return Mapper.Map<Book, ProductViewModel>(_model);
         }
     }
+
+ 
 
 }

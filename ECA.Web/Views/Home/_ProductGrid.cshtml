@@ -1,0 +1,10 @@
+﻿@model List<ECA.Web.ViewModel.CategoryViewModel>
+
+
+@foreach (var categoryViewModelItem in @Model)
+{
+    <h2>@categoryViewModelItem.CategoryName</h2>
+    <div class="rowDiv">
+        @{Html.RenderPartial("_ProductGridItem", categoryViewModelItem);}
+    </div>
+}

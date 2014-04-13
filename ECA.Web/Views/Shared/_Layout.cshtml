@@ -1,4 +1,4 @@
-﻿;<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -19,11 +19,11 @@
                 url: "http://localhost:23062/CatalogService.svc/web/books/xml",
                 dataType: "xml",
                 success: function (data, status, xhr) {
-                    var xml = $.parseXML(data.text);
+                    var xml = $.parseXML(data.childNodes[0].childNodes[0].data);
                     $(xml).find("BookCategory").each(function () {
                         if ($(this).find("CategoryName").text() != "") {
                             var categoryName = $(this).find("CategoryName").text();
-                            var categoryNameHtml = "<h4>" + categoryName + "</h4>";
+                            var categoryNameHtml =  "<h4>" + categoryName + "</h4>";
                             var treeHtml = $("#catalogTreeView").html();
                             $("#catalogTreeView").html(treeHtml + categoryNameHtml);
                         }
@@ -47,7 +47,7 @@
            
         </script>
     </head>
-    @model ECA.Web.ViewModel.BaseViewModel  
+
     <body>
         <header>
             @*@{Html.RenderPartial("_HeaderCart", Model.ShoppingCartHeaderViewModel);}*@

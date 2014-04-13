@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="ECA.CartServices" elementFormDefault="qualified" targetNamespace="ECA.CartServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:23062/CartService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ECA.Model" />
+  <xs:import schemaLocation="http://localhost:23062/CartService.svc?xsd=xsd3" namespace="ECA.Services.FaultContracts" />
   <xs:element name="GetCartItems">
     <xs:complexType>
       <xs:sequence>
@@ -15,4 +16,5 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element xmlns:q2="ECA.Services.FaultContracts" name="BaseServiceFault" nillable="true" type="q2:BaseServiceFault" />
 </xs:schema>

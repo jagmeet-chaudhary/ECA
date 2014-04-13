@@ -64,9 +64,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\catalogService\CatalogService1.wsdl" />
-    <None Include="Service References\catalogService\CatalogService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\catalogService\CatalogService2.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -75,6 +72,9 @@
     </None>
     <None Include="Service References\catalogService\CatalogService4.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\catalogService\ECA.Console.catalogService.Book.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\catalogService\ECA.Console.catalogService.BookCategory.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

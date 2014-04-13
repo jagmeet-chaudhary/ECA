@@ -16,6 +16,14 @@ namespace ECA.Web.Controllers
             return View();
         }
 
+        public ActionResult  ProductGrid()
+        {
+            CatalogService.CatalogServiceClient client= new CatalogService.CatalogServiceClient();
+            List<BookCategory> booksByCategory =  client.GetAllBooksGroupedByCategory();
+            List<CategoryViewModel> categoryViewModelList = booksByCategory.Select(bc => new CategoryViewModelBuilder(bc).Build()).ToList();
+            return View("_ProductGrid",categoryViewModelList);
+
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";

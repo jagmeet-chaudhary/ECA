@@ -1,0 +1,8 @@
+﻿@model ECA.Web.ViewModel.CategoryViewModel
+    @foreach (var book in @Model.Books)
+    {
+        <div class="cellDiv">
+            <div><img class="ProductImageGrid" src='/Images/Product/@book.ImageUrl'></div>
+            <div>@book.Title</div>
+        </div>
+    }

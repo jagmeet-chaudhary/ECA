@@ -4,9 +4,8 @@
     <xsd:schema targetNamespace="ECA.CatalogServices/Imports">
       <xsd:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd0" namespace="ECA.CatalogServices" />
       <xsd:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd2" namespace="ECA.Contracts" />
-      <xsd:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ECA.Model" />
-      <xsd:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd4" namespace="ECA.Services.FaultContracts" />
+      <xsd:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ECA.Model" />
+      <xsd:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd3" namespace="ECA.Services.FaultContracts" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategory_InputMessage">
@@ -15,8 +14,8 @@
   <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategory_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBooksGroupedByCategoryResponse" />
   </wsdl:message>
-  <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategory_CatalogServiceFault_FaultMessage">
-    <wsdl:part name="detail" element="tns:CatalogServiceFault" />
+  <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategory_BaseServiceFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BaseServiceFault" />
   </wsdl:message>
   <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategoryAsString_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBooksGroupedByCategoryAsString" />
@@ -24,19 +23,33 @@
   <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategoryAsString_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllBooksGroupedByCategoryAsStringResponse" />
   </wsdl:message>
-  <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategoryAsString_CatalogServiceFault_FaultMessage">
-    <wsdl:part name="detail" element="tns:CatalogServiceFault" />
+  <wsdl:message name="ICatalogService_GetAllBooksGroupedByCategoryAsString_BaseServiceFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BaseServiceFault" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogService_GetBookDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookDetails" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogService_GetBookDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBookDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogService_GetBookDetails_BaseServiceFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BaseServiceFault" />
   </wsdl:message>
   <wsdl:portType name="ICatalogService">
     <wsdl:operation name="GetAllBooksGroupedByCategory">
       <wsdl:input wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategory" message="tns:ICatalogService_GetAllBooksGroupedByCategory_InputMessage" />
       <wsdl:output wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategoryResponse" message="tns:ICatalogService_GetAllBooksGroupedByCategory_OutputMessage" />
-      <wsdl:fault wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategoryCatalogServiceFault" name="CatalogServiceFault" message="tns:ICatalogService_GetAllBooksGroupedByCategory_CatalogServiceFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategoryBaseServiceFault" name="BaseServiceFault" message="tns:ICatalogService_GetAllBooksGroupedByCategory_BaseServiceFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAllBooksGroupedByCategoryAsString">
       <wsdl:input wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategoryAsString" message="tns:ICatalogService_GetAllBooksGroupedByCategoryAsString_InputMessage" />
       <wsdl:output wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategoryAsStringResponse" message="tns:ICatalogService_GetAllBooksGroupedByCategoryAsString_OutputMessage" />
-      <wsdl:fault wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategoryAsStringCatalogServiceFault" name="CatalogServiceFault" message="tns:ICatalogService_GetAllBooksGroupedByCategoryAsString_CatalogServiceFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="ECA.CatalogServices/ICatalogService/GetAllBooksGroupedByCategoryAsStringBaseServiceFault" name="BaseServiceFault" message="tns:ICatalogService_GetAllBooksGroupedByCategoryAsString_BaseServiceFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookDetails">
+      <wsdl:input wsaw:Action="ECA.CatalogServices/ICatalogService/GetBookDetails" message="tns:ICatalogService_GetBookDetails_InputMessage" />
+      <wsdl:output wsaw:Action="ECA.CatalogServices/ICatalogService/GetBookDetailsResponse" message="tns:ICatalogService_GetBookDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="ECA.CatalogServices/ICatalogService/GetBookDetailsBaseServiceFault" name="BaseServiceFault" message="tns:ICatalogService_GetBookDetails_BaseServiceFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

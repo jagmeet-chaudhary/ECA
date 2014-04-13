@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:23062/CartService.svc?xsd=xsd0" namespace="ECA.CartServices" />
       <xsd:import schemaLocation="http://localhost:23062/CartService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:23062/CartService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ECA.Model" />
+      <xsd:import schemaLocation="http://localhost:23062/CartService.svc?xsd=xsd3" namespace="ECA.Services.FaultContracts" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICartService_GetCartItems_InputMessage">
@@ -13,10 +14,14 @@
   <wsdl:message name="ICartService_GetCartItems_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCartItemsResponse" />
   </wsdl:message>
+  <wsdl:message name="ICartService_GetCartItems_BaseServiceFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BaseServiceFault" />
+  </wsdl:message>
   <wsdl:portType name="ICartService">
     <wsdl:operation name="GetCartItems">
       <wsdl:input wsaw:Action="ECA.CartServices/ICartService/GetCartItems" message="tns:ICartService_GetCartItems_InputMessage" />
       <wsdl:output wsaw:Action="ECA.CartServices/ICartService/GetCartItemsResponse" message="tns:ICartService_GetCartItems_OutputMessage" />
+      <wsdl:fault wsaw:Action="ECA.CartServices/ICartService/GetCartItemsBaseServiceFault" name="BaseServiceFault" message="tns:ICartService_GetCartItems_BaseServiceFault_FaultMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

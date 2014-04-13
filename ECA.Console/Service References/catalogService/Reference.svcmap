@@ -26,7 +26,6 @@
   <Metadata>
     <MetadataFile FileName="CatalogService.xsd" MetadataType="Schema" ID="4a5b7653-b01b-49fa-bb0e-73543d44af62" SourceId="1" SourceUrl="http://localhost:23062/CatalogService.svc?xsd=xsd0" />
     <MetadataFile FileName="CatalogService.wsdl" MetadataType="Wsdl" ID="be43dbba-7b26-4401-8f66-19c2efa4e274" SourceId="1" SourceUrl="http://localhost:23062/CatalogService.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="CatalogService1.xsd" MetadataType="Schema" ID="e22d0540-dbc0-4415-9551-e2f04d12616d" SourceId="1" SourceUrl="http://localhost:23062/CatalogService.svc?xsd=xsd4" />
     <MetadataFile FileName="CatalogService.disco" MetadataType="Disco" ID="8cf2f871-9d8c-4382-b298-484162200682" SourceId="1" SourceUrl="http://localhost:23062/CatalogService.svc?disco" />
     <MetadataFile FileName="CatalogService1.wsdl" MetadataType="Wsdl" ID="62f4e73e-2164-4bd4-bfd8-4828d3792ea9" SourceId="1" SourceUrl="http://localhost:23062/CatalogService.svc?wsdl" />
     <MetadataFile FileName="CatalogService2.xsd" MetadataType="Schema" ID="f437e361-0a1e-4a9e-bb84-57c2b5e0655b" SourceId="1" SourceUrl="http://localhost:23062/CatalogService.svc?xsd=xsd3" />

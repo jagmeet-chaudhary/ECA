@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="ECA.CatalogServices" elementFormDefault="qualified" targetNamespace="ECA.CatalogServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd2" namespace="ECA.Contracts" />
-  <xs:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd4" namespace="ECA.Services.FaultContracts" />
+  <xs:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ECA.Model" />
+  <xs:import schemaLocation="http://localhost:23062/CatalogService.svc?xsd=xsd3" namespace="ECA.Services.FaultContracts" />
   <xs:element name="GetAllBooksGroupedByCategory">
     <xs:complexType>
       <xs:sequence />
@@ -10,11 +10,11 @@
   <xs:element name="GetAllBooksGroupedByCategoryResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="ECA.Contracts" minOccurs="0" name="GetAllBooksGroupedByCategoryResult" nillable="true" type="q1:ArrayOfBookCategory" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ECA.Model" minOccurs="0" name="GetAllBooksGroupedByCategoryResult" nillable="true" type="q1:ArrayOfBookCategory" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element xmlns:q2="ECA.Services.FaultContracts" name="CatalogServiceFault" nillable="true" type="q2:CatalogServiceFault" />
+  <xs:element xmlns:q2="ECA.Services.FaultContracts" name="BaseServiceFault" nillable="true" type="q2:BaseServiceFault" />
   <xs:element name="GetAllBooksGroupedByCategoryAsString">
     <xs:complexType>
       <xs:sequence>
@@ -26,6 +26,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="GetAllBooksGroupedByCategoryAsStringResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBookDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ECA.Model" minOccurs="0" name="GetBookDetailsResult" nillable="true" type="q3:Book" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
